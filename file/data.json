@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Naveenraj",
+        "Age": "24",
+        "BloodGroup": "B+ve",
+        "ContactNo": "8056767690",
+        "City": "Gingee",
+        "State": "Tamil Nadu"
+    },
+    {
+        "Name": "A",
+        "Age": "2",
+        "BloodGroup": "B-ve",
+        "ContactNo": "9001265123",
+        "City": "Sowkarpet",
+        "State": "Tamil Nadu"
+    },
+    {
+        "Name": "Raja Guru",
+        "Age": "25",
+        "BloodGroup": "B+ve",
+        "ContactNo": "8056767690",
+        "City": "Guduvancherry",
+        "State": "Tamil Nadu"
+    }
+]

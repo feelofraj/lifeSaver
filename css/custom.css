@@ -1,0 +1,92 @@
+.index
+{
+
+}
+.title
+{
+background-color: aliceblue;
+border: 1px outset rgb(184, 197, 209);
+height: 70px;
+
+}
+.logo
+{
+    
+   font-size: x-large;
+    text-align: center;
+  
+    
+    
+}
+.logo:hover
+{
+    
+    border-style: inset;
+    border-color: rgb(168, 236, 236);
+}
+.menu
+{
+    
+}
+.pageContent
+{
+
+}
+.footer .nav
+{
+    background-color: aliceblue;
+    border: 1px outset rgb(195, 224, 253);
+}
+.home .carousel 
+{
+    margin: 5px;
+    display: inherit;
+align-items: center;
+width:100%;
+height: 50%;
+opacity: 2;
+}
+.home .carousel img
+{
+   width:100%;
+   height: 500px;
+}
+.pagination li
+{
+    font-size: medium;
+    border: 1px solid rgb(94, 94, 245);
+    width: 25px;
+    text-align: center;
+    
+}
+.register form
+{
+    margin: 5px;
+    border: 1px outset lightcyan;
+    padding: 5px;
+  
+}
+.register button
+{
+   display: block;
+    width: 30%;
+    margin:6px;
+    margin-left: 20%;
+    
+
+}
+.register label
+{
+margin: 3px;
+}
+.register input
+{
+ 
+    display: inline;
+    
+}
+.form-control 
+{
+    display: block;
+    padding: 0px;
+}

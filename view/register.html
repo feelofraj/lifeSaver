@@ -1,0 +1,20 @@
+<div class="register">
+    <form>
+        <label class="col-sm-4" for="my-input">Name</label>
+        <input id="my-input" class="form-control col-sm-4" required>
+        <label class="col-sm-4" for="my-input">Age</label>
+        <input id="my-input" class="form-control col-sm-4" required>
+        <label class="col-sm-4" for="my-input">Blood Group</label>
+        <input id="my-input" class="form-control col-sm-4" required>
+        <label class="col-sm-4" for="my-input">Contact Number</label>
+        <input id="my-input" class="form-control col-sm-4" required>
+        <label class="col-sm-4" for="my-input">State</label>
+        <select id="my-input" class="custom-select col-sm-4" ng-model="stateSelect">
+            <option ng-repeat="val in stateList" value="{{val.Name}}">{{val.Name}}</option>
+        </select>
+
+        <label class="col-sm-4" for="my-input">City</label>
+        <input id="my-input" class="form-control col-sm-4" required>
+        <button type="submit" class="btn btn-primary col-sm-2">Save Life</button>
+    </form>
+</div>

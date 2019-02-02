@@ -1,0 +1,28 @@
+<div class="lifeSaver">
+
+    <div class="">
+        <input class="form-control" type="text" placeholder="Enter your search text" ng-model="test">
+    </div>
+    <table class="table table-toggle">
+        <tr>
+            <th>Name <i class="fas fa-sort-down" ng-click="orderByMe('Name')"></i></th>
+            <th>Age <i class="fas fa-sort-down" ng-click="orderByMe('Age')"></i></th>
+            <th>Blood Group <i class="fas fa-sort-down" ng-click="orderByMe('BloodGroup')"></i></th>
+            <th>City <i class="fas fa-sort-down" ng-click="orderByMe('City')"></i></th>
+            <th>State <i class="fas fa-sort-down" ng-click="orderByMe('State')"></i></th>
+            <th>Contact No <i class="fas fa-sort-down" ng-click="orderByMe('ContactNo')"></i></th>
+
+        </tr>
+        <tr dir-paginate="x in lyfSaverDetails | orderBy : myOrderBy | filter : test | itemsPerPage:15">
+            <td>{{x.Name}}</td>
+            <td>{{x.Age}}</td>
+            <td>{{x.BloodGroup}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.State}}</td>
+            <td>{{x.ContactNo}}</td>
+        </tr>
+    </table>
+    <dir-pagination-controls class="pagination" max-size="5" direction-links="true" boundary-links="true">
+    </dir-pagination-controls>
+
+</div>
