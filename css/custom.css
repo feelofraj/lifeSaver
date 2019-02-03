@@ -84,11 +84,20 @@ opacity: 2;
 {
 border: 1px groove rgb(120, 191, 253);
 font-size: 60px;
+font-variant-caps: all-petite-caps;
+}
+.home ul li
+{
+    list-style: none;
+    font-size: medium;
+font-variant-caps: titling-caps;
+margin: 5px;
 }
 .home article p
 {
-border: 1px groove rgb(173, 211, 245);
-font-size: 20px;
+
+font-size: medium;
+font-variant-caps: titling-caps;
 
 }
 .pagination li
@@ -104,7 +113,7 @@ font-size: 20px;
     margin: 5px;
     border: 1px outset lightcyan;
     padding: 5px;
-  
+    
 }
 .register button
 {
