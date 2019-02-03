@@ -1,32 +1,32 @@
 <div class="lifeSaver">
 
-  
-        <input class="form-control" type="text" placeholder="Enter your search text" ng-model="test">
-  
-    <table class="table table-hover table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>Name <i class="fas fa-sort-down" ng-click="orderByMe('Name')"></i></th>
-                <th>Blood Group <i class="fas fa-sort-down" ng-click="orderByMe('BloodGroup')"></i></th>
-                <th>Number <i class="fas fa-sort-down" ng-click="orderByMe('ContactNo')"></i></th>
-                <th>City <i class="fas fa-sort-down" ng-click="orderByMe('City')"></i></th>
-                <th>State <i class="fas fa-sort-down" ng-click="orderByMe('State')"></i></th>
-                <th>Age <i class="fas fa-sort-down" ng-click="orderByMe('Age')"></i></th>
+<h1 >List of blood donars</h1>
+    <input class="form-control mt-3 mb-3" type="text" placeholder="Enter your search text" ng-model="test">
+    <div class="table">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name <i class="fas fa-sort-down" ng-click="orderByMe('Name')"></i></th>
+                    <th>Blood Group <i class="fas fa-sort-down" ng-click="orderByMe('BloodGroup')"></i></th>
+                    <th>Number <i class="fas fa-sort-down" ng-click="orderByMe('ContactNo')"></i></th>
+                    <th>City <i class="fas fa-sort-down" ng-click="orderByMe('City')"></i></th>
+                    <th>State <i class="fas fa-sort-down" ng-click="orderByMe('State')"></i></th>
+                    <th>Age <i class="fas fa-sort-down" ng-click="orderByMe('Age')"></i></th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr dir-paginate="x in lyfSaverDetails | orderBy : myOrderBy | filter : test | itemsPerPage:15">
-                <td>{{x.Name}}</td>
-                <td>{{x.BloodGroup}}</td>
-                <td>{{x.ContactNo}}</td>
-                <td>{{x.City}}</td>
-                <td>{{x.State}}</td>
-                <td>{{x.Age}}</td>
-            </tr>
-        </tbody>
-    </table>
-    <dir-pagination-controls class="pagination" max-size="5" direction-links="true" boundary-links="true">
-    </dir-pagination-controls>
-
+                </tr>
+            </thead>
+            <tbody>
+                <tr dir-paginate="x in lyfSaverDetails | orderBy : myOrderBy | filter : test | itemsPerPage:15">
+                    <td>{{x.Name}}</td>
+                    <td>{{x.BloodGroup}}</td>
+                    <td>{{x.ContactNo}}</td>
+                    <td>{{x.City}}</td>
+                    <td>{{x.State}}</td>
+                    <td>{{x.Age}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <dir-pagination-controls class="pagination" max-size="5" direction-links="true" boundary-links="true">
+        </dir-pagination-controls>
+    </div>
 </div>

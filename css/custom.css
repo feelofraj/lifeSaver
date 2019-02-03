@@ -58,6 +58,14 @@ height: 70px;
     background-color: aliceblue;
     border: 1px outset rgb(195, 224, 253);
 }
+.home
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 600;
+    margin: 10px;
+}
+
 .home .carousel 
 {
     margin: 5px;
@@ -71,6 +79,17 @@ opacity: 2;
 {
    width:100%;
    height: 500px;
+}
+.home article
+{
+border: 1px groove rgb(120, 191, 253);
+font-size: 60px;
+}
+.home article p
+{
+border: 1px groove rgb(173, 211, 245);
+font-size: 20px;
+
 }
 .pagination li
 {
@@ -110,4 +129,10 @@ margin: 3px;
 {
     display: block;
     padding: 0px;
+}
+.table
+{
+    overflow-x: auto;
+    border-collapse: separate;
+   
 }
