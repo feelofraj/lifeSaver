@@ -5,28 +5,49 @@
 .title
 {
 background-color: aliceblue;
-border: 1px outset rgb(184, 197, 209);
+border: 1px outset rgb(228, 235, 241);
 height: 70px;
 
+}
+.navbar
+{
+    
+    display: block;
+}
+.nav
+{
+   padding-right: 0;
 }
 .logo
 {
     
    font-size: x-large;
-    text-align: center;
-  
-    
+    text-align: center;   
+}
+.logo span i
+{
+    color: rgba(235, 6, 6, 0.89);
+
+    opacity: 1;
+}
+.logo span i:hover
+{
+    color: rgba(29, 7, 7, 0.89);
+    background-color: rgb(248, 244, 244);
+    opacity: 2;
     
 }
+
 .logo:hover
 {
     
-    border-style: inset;
-    border-color: rgb(168, 236, 236);
+    border-bottom-style: inset;
+    border-bottom-color: rgb(242, 243, 243);
 }
-.menu
+
+.connectUs p i
 {
-    
+    color: rgb(7, 6, 8);
 }
 .pageContent
 {
@@ -43,7 +64,7 @@ height: 70px;
     display: inherit;
 align-items: center;
 width:100%;
-height: 50%;
+height: 40%;
 opacity: 2;
 }
 .home .carousel img

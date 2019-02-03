@@ -26,26 +26,26 @@
 
 <body ng-controller="homeController">
     <div class="index">
-        <div class="row title" id="Header">
-            <div class="logo col-sm-3">
-                    <span href="#">Life<i class="fa fa-heartbeat" aria-hidden="true"></i>Saver</span>
-            </div>
-            
-            <div class="col-sm-9">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a ui-sref="home" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a ui-sref="register" class="nav-link">Join us</a>
-                </li>
-                <li class="nav-item">
-                    <a ui-sref="Detail" class="nav-link">Life Saver</a>
-                </li>
-            </ul>
 
-        </div>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo">
+                <span class="navbar-brand" href="#">Life<i class="fa fa-heartbeat" aria-hidden="true"></i>Saver</span>
+            </div>
+          
+            <div class="navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a ui-sref="home" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a ui-sref="register" class="nav-link">Join us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a ui-sref="Detail" class="nav-link">Donar List</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 
         <div class="pageContent">
@@ -63,7 +63,7 @@
                     <a ui-sref="register" class="nav-link">Join Us</a>
                 </li>
                 <li class="nav-item">
-                    <a ui-sref="Detail" class="nav-link">Life Saver</a>
+                    <a ui-sref="Detail" class="nav-link">Donar List</a>
                 </li>
             </ul>
         </div>

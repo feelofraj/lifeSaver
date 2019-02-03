@@ -1,6 +1,7 @@
 var app=angular.module('myApp', ['ui.router','angularUtils.directives.dirPagination']);
  
 app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouteProvider) {
+
 $stateProvider
 .state('home',{
   url :'/',
@@ -17,5 +18,6 @@ $stateProvider
     templateUrl :'view/lifeSaver.html',
     controller : 'homeController'
   })
+ 
 $urlRouteProvider.otherwise('/');
 }]);
