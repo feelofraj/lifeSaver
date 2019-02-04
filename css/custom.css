@@ -113,6 +113,7 @@ font-variant-caps: titling-caps;
     margin: 5px;
     border: 1px outset lightcyan;
     padding: 5px;
+    height: 100%;
     
 }
 .register button
@@ -130,10 +131,9 @@ margin: 3px;
 }
 .register input
 {
- 
     display: inline;
-    
 }
+
 .form-control 
 {
     display: block;
