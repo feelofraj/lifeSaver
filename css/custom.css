@@ -90,8 +90,8 @@ font-variant-caps: all-petite-caps;
 {
     list-style: none;
     font-size: medium;
-font-variant-caps: titling-caps;
-margin: 5px;
+    font-variant-caps: titling-caps;
+    margin: 5px;
 }
 .home article p
 {
@@ -107,6 +107,20 @@ font-variant-caps: titling-caps;
     width: 25px;
     text-align: center;
     
+}
+.content h2{
+    padding: 15px;
+    margin: auto;
+    font-style: normal;
+    text-transform: capitalize;
+}
+.register ul li
+{
+    list-style: none;
+    font-size: x-large;
+    padding-left: 2%;
+    font-variant-caps: titling-caps;
+    margin: 5px;
 }
 /* .register form
 {
@@ -149,12 +163,9 @@ margin: 3px;
   }
   .form-signin h2
   {
-      padding: 3px;
+    padding: 3px;
+    font-style: normal;
     text-transform: capitalize;
-    border-left-style: ridge;
-    border-left-color: rgb(195, 245, 228);
-    border-block-end-style: groove;
-    border-block-end-color: rgb(195, 245, 228);
   }
   .form-label-group {
     position: relative;
