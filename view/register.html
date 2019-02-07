@@ -1,7 +1,7 @@
 <div class="register">
     <div class="row">
         <div class="col-sm-6 content">
-                <h2>Welcome's you to save a life</h2>
+            <h2>Welcome's you to save a life</h2>
             <ul>
                 <li>Most of the people are willing to donate blood to needy people, but we don't know how to reach
                     them.</li>
@@ -13,40 +13,56 @@
             </ul>
         </div>
         <div class="col-sm-6">
-            <form class="form-signin">
+            <form class="form-signin" name="regForm" id="regForm">
                 <h2>Kindly fill your details</h2>
                 <div class="form-label-group">
-                    <input type="text" id="Name" class="form-control" placeholder="Name" required autofocus>
+                    <input type="text" id="Name" ng-model="Name" class="form-control" placeholder="Name" required
+                        autofocus>
                     <label for="inputEmail">Name</label>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="Age" class="form-control" placeholder="Age" required>
+                    <input type="number" min="18" max="70" id="Age" ng-model="Age" class="form-control" placeholder="Age"
+                        required>
                     <label for="inputPassword">Age</label>
+
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="BloodGroup" class="form-control" placeholder="Blood Group" required
-                        autofocus>
+                    <input type="text" id="BloodGroup" ng-model="BloodGroup" class="form-control" placeholder="Blood Group"
+                        required autofocus>
                     <label for="inputEmail">Blood Group</label>
                 </div>
                 <div class="form-label-group">
-                    <input type="tel" id="ContactNumber" class="form-control" placeholder="Contact Number" required>
+                    <input type="tel" ng-minLength=10 id="ContactNumber" ng-model="ContactNumber" class="form-control"
+                        placeholder="Contact Number" required>
                     <label for="inputPassword">Contact Number</label>
+                    <span class="text-danger" ng-show="regForm.ContactNumber.$touched && regForm.ContactNumber.$invalid">Please
+                        enter valid number</span>
                 </div>
                 <div class="form-label-group">
-                    <select id="my-input" class="form-control" placeholder="Select a state" ng-model="stateSelect">
+                    <select id="my-input" class="form-control" ng-model="stateSelect">
+                        <option value="" disabled selected>Select a state</option>
                         <option ng-repeat="val in stateList" value="{{val.Name}}">{{val.Name}}</option>
                     </select>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="City" class="form-control" placeholder="City" required>
+                    <input type="text" id="City" ng-model="City" class="form-control" placeholder="City" required>
                     <label for="inputPassword">City</label>
                 </div>
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"> I am ready to save a life
+                        <input type="checkbox" id="Agree" ng-model="Agree" value="remember-me"> I am ready to save a
+                        life
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary col-sm-2">Save Life</button>
+                <div class="alert alert-success" ng-show="resultShow">{{result}}</div>
+                <!-- <div class="btn-group" role="group" aria-label="Basic example"> -->
+                <button type="submit" ng-click="regForm.$valid && saveLife()" class="btn btn-outline-primary col-sm-2">
+                    {{regBtnValue}}
+                    <i class="fa fa-spinner fa-spin" ng-show="registerProcessing" aria-hidden="true"></i>
+                    <i class="fa fa-check" ng-show="registerProcessing && resultShow" aria-hidden="true"></i>
+                </button>
+
+
             </form>
         </div>
     </div>
