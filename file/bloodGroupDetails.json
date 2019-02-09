@@ -1,0 +1,51 @@
+[{
+    "sNo" : "1",
+    "bloodType" : "A+",
+    "donateTo" : "A+ AB+",
+    "receiveFrom" : "A+ A- O+ O-"
+},
+{
+    "sNo" : "2",
+    "bloodType" : "O+",
+    "donateTo" : "O+ A+ B+ AB+",
+    "receiveFrom" : "O+ O-"
+},
+{
+    "sNo" : "3",
+    "bloodType" : "B+",
+    "donateTo" : "B+ AB+",
+    "receiveFrom" : "B+ B- O+ O-"
+},
+
+{
+    "sNo" : "4",
+    "bloodType" : "A-",
+    "donateTo" : "A+ A- AB+ AB-",
+    "receiveFrom" : "A- O-"
+},
+{
+    "sNo" : "5",
+    "bloodType" : "O-",
+    "donateTo" : "Everyone",
+    "receiveFrom" : "O-"
+},
+{
+    "sNo" : "6",
+    "bloodType" : "B-",
+    "donateTo" : "B+ B- AB+ AB-",
+    "receiveFrom" : "B- O-"
+},
+{
+    "sNo" : "7",
+    "bloodType" : "AB+",
+    "donateTo" : "AB+",
+    "receiveFrom" : "Everyone"
+},
+{
+    "sNo" : "8",
+    "bloodType" : "AB-",
+    "donateTo" : "AB+ AB-",
+    "receiveFrom" : "AB- A- B- O-"
+}
+
+]

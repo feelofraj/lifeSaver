@@ -1,17 +1,6 @@
 <div class="register">
     <div class="row">
-        <div class="col-sm-6 content">
-            <h2>Welcome's you to save a life</h2>
-            <ul>
-                <li>Most of the people are willing to donate blood to needy people, but we don't know how to reach
-                    them.</li>
-                <li>Now its easy to reach them.</li>
-                <li>Once you registered your details here, you may get call incase of emergency.</li>
-                <li>God give life to all, with a single help you might give second life.</li>
-                <li>In this journey we are there for uniting hands.</li>
-                <li>Now you're none other than God. Join hands with us.</li>
-            </ul>
-        </div>
+
         <div class="col-sm-6">
             <form class="form-signin" name="regForm" id="regForm">
                 <h2>Kindly fill your details</h2>
@@ -21,23 +10,32 @@
                     <label for="Name">Name</label>
                 </div>
                 <div class="form-label-group">
-                    <input type="number" min="18" max="70" id="Age" ng-model="Age" class="form-control" placeholder="Age"
-                        required>
+                    <input type="number" min="18" max="70" id="Age" ng-model="Age" class="form-control"
+                        placeholder="Age" required>
                     <label for="Password">Age</label>
 
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="BloodGroup" ng-model="BloodGroup" class="form-control" placeholder="Blood Group"
-                        required autofocus>
-                    <label for="Email">Blood Group</label>
-                </div>
-                <div class="form-label-group">
-                    <input type="tel" ng-minLength=10 id="ContactNumber" ng-model="ContactNumber" class="form-control"
+                    <input type="tel"  ng-minlength="10" 
+                    ng-maxlength="10" id="ContactNumber" name="ContactNumber" ng-model="ContactNumber" class="form-control"
                         placeholder="Contact Number" required>
                     <label for="inputPassword">Contact Number</label>
-                    <span class="text-danger" ng-show="regForm.ContactNumber.$touched && regForm.ContactNumber.$invalid">Please
+                    <span class="text-danger"
+                        ng-show="((regForm.ContactNumber.$touched) && (regForm.ContactNumber.$error.minlength) || (regForm.ContactNumber.$error.maxlength))">Please
                         enter valid number</span>
                 </div>
+                <div class="form-label-group">
+                    <select id="BloodGroup" class="form-control" ng-model="BloodGroup" required autofocus>
+                        <option value="" disabled selected>Select  blood group</option>
+                        <option ng-repeat="value in BloodGroupList" value="{{value.Name}}">{{value.Name}}</option>
+                    </select>
+                </div>
+                <!-- <div class="form-label-group">
+                    <input type="text" id="BloodGroup" ng-model="BloodGroup" class="form-control"
+                        placeholder="Blood Group" required autofocus>
+                    <label for="Email">Blood Group</label>
+                </div> -->
+               
                 <div class="form-label-group">
                     <select id="my-input" class="form-control" ng-model="stateSelect">
                         <option value="" disabled selected>Select a state</option>
@@ -64,6 +62,18 @@
 
 
             </form>
+        </div>
+        <div class="col-sm-6 content">
+            <h2>Welcome's you to save a life</h2>
+            <ul>
+                <li>Most of the people are willing to donate blood to needy people, but we don't know how to reach
+                    them.</li>
+                <li>Now its easy to reach them.</li>
+                <li>Once you registered your details here, you may get call incase of emergency.</li>
+                <li>God give life to all, with a single help you might give second life.</li>
+                <li>In this journey we are there for uniting hands.</li>
+                <li>Now you're none other than God. Join hands with us.</li>
+            </ul>
         </div>
     </div>
 </div>

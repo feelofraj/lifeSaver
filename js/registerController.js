@@ -1,10 +1,14 @@
 app.controller('registerController', function ($scope,$http,$state,$rootScope) {
-   url="file/state.json";
+   stateUrl="file/state.json";
+   bloodGroupUrl="file/bloodgroup.json";
    regApi='http://localhost:8083/regisApi';
    $scope.regBtnValue="Save a Life";
-    $http.get(url).then( function (response) {
+    $http.get(stateUrl).then( function (response) {
         $scope.stateList = response.data;
     });
+    $http.get(bloodGroupUrl).then( function (response) {
+      $scope.BloodGroupList = response.data;
+  });
   $scope.saveLife = function (){
     var data = {
         Name:$scope.Name,
@@ -17,7 +21,7 @@ app.controller('registerController', function ($scope,$http,$state,$rootScope) {
       }
       $scope.regBtnValue="Processing";
       $scope.registerProcessing=true;
-      console.log(data);
+    
     $http.post(regApi,data).then(function (response) 
     {
        
