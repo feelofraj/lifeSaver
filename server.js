@@ -9,7 +9,8 @@ var multer = require('multer'); // v1.0.5
 var upload = multer();
 
 var app = express();
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
 app.get('/donorListApi', function (req, res) {
@@ -28,12 +29,13 @@ app.get('/donorListApi', function (req, res) {
         };
     });
 });
-app.post('/regisApi', function (req, res) {
+app.post('/regisApi', upload.array() , function (req, res) {
+   
     MongoClient.connect(mongoServer, function (err, database) {
         if (err) console.error(err);
         else {
             conStr = database.db('lifesafer').collection('donorList');
-            conStrLogin = database.db('test').collection('authentication');
+            // conStrLogin = database.db('test').collection('authentication');
             Name = (req.body.Name);
             BloodGroup = (req.body.BloodGroup);
             Age = (req.body.Age);
@@ -43,7 +45,7 @@ app.post('/regisApi', function (req, res) {
             Agree = (req.body.Agree);
             regDate = dateFormat(dateTime, "dd-MM-yyyy hh:MM:ss");;
             registration = { Name: Name, BloodGroup: BloodGroup, Age: Age, ContactNo: ContactNo, City: City, State: State, Agree: Agree ,regDate:regDate};
-            Login = { username: userId, password: newPassword }
+            // Login = { username: userId, password: newPassword }
             console.log(registration);
             conStr.findOne({ $and: [{ ContactNo: ContactNo }, { BloodGroup: BloodGroup }] }, function (err, data) {
                 if (err) console.error(err);
@@ -66,5 +68,5 @@ app.post('/regisApi', function (req, res) {
 });
 app.listen(8083, function (res, err) {
     if (err) console.error('Error starting server');
-    console.log('Server started and listening : http://localhost:8083')
+    console.log('Server started and listening : http://localhost:8083');
 })
