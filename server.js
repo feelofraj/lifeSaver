@@ -14,24 +14,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
 app.get('/donorListApi', function (req, res) {
-    MongoClient.connect(mongoServer, function (err, database) {
+    MongoClient.connect(mongoServer, {
+        useNewUrlParser: true
+    }, function (err, database) {
         if (err) console.log(err);
         else {
             conStr = database.db('lifesafer').collection('donorList');
             conStr.find({}).toArray(function (err, data) {
                 if (err) console.log(err);
                 else {
-                   
+
                     res.status(200).send(data);
                     res.end();
-                }
+                };
+                database.close();
             })
         };
     });
 });
-app.post('/regisApi', upload.array() , function (req, res) {
-   
-    MongoClient.connect(mongoServer, function (err, database) {
+app.post('/regisApi', upload.array(), function (req, res) {
+
+    MongoClient.connect(mongoServer, {
+        useNewUrlParser: true
+    }, function (err, database) {
         if (err) console.error(err);
         else {
             conStr = database.db('lifesafer').collection('donorList');
@@ -44,7 +49,7 @@ app.post('/regisApi', upload.array() , function (req, res) {
             State = (req.body.State);
             Agree = (req.body.Agree);
             regDate = dateFormat(dateTime, "dd-MM-yyyy hh:MM:ss");;
-            registration = { Name: Name, BloodGroup: BloodGroup, Age: Age, ContactNo: ContactNo, City: City, State: State, Agree: Agree ,regDate:regDate};
+            registration = { Name: Name, BloodGroup: BloodGroup, Age: Age, ContactNo: ContactNo, City: City, State: State, Agree: Agree, regDate: regDate };
             // Login = { username: userId, password: newPassword }
             console.log(registration);
             conStr.findOne({ $and: [{ ContactNo: ContactNo }, { BloodGroup: BloodGroup }] }, function (err, data) {
@@ -62,6 +67,7 @@ app.post('/regisApi', upload.array() , function (req, res) {
                     result = "Thanks for doing you are already registered ,Kindly share to others";
                     res.end(result);
                 };
+                database.close();
             });
         }
     })

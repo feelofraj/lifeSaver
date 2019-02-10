@@ -6,8 +6,11 @@
                 <h2>Kindly fill your details</h2>
                 <div class="form-label-group">
                     <input type="text" id="Name" ng-model="Name" class="form-control" placeholder="Name" required
-                        autofocus>
+                        autofocus pattern="[a-zA-Z\s]+" title="Username should only contain  letters. e.g. john">
                     <label for="Name">Name</label>
+                    <span class="text-danger"
+                    ng-show="((regForm.ContactNumber.$touched) && (regForm.ContactNumber.$error.minlength) || (regForm.ContactNumber.$error.maxlength))">Please
+                    enter valid number</span>
                 </div>
                 <div class="form-label-group">
                     <input type="number" min="18" max="70" id="Age" ng-model="Age" class="form-control"
@@ -16,7 +19,7 @@
 
                 </div>
                 <div class="form-label-group">
-                    <input type="tel"  ng-minlength="10" 
+                    <input type="number"  ng-minlength="10" 
                     ng-maxlength="10" id="ContactNumber" name="ContactNumber" ng-model="ContactNumber" class="form-control"
                         placeholder="Contact Number" required>
                     <label for="inputPassword">Contact Number</label>
@@ -43,8 +46,9 @@
                     </select>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="City" ng-model="City" class="form-control" placeholder="City" required>
-                    <label for="inputPassword">City</label>
+                    <input type="text" id="City" ng-model="City" class="form-control" placeholder="City" required pattern="[a-zA-Z\s]+" title="city should only contain  letters. e.g. chennai">
+                    <label for="inputPassword" >City</label>
+
                 </div>
                 <div class="checkbox mb-3">
                     <label>
