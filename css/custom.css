@@ -16,16 +16,43 @@ border: 1px outset rgb(228, 235, 241);
 height: 70px;
 
 }
-
+.gotoTop
+{
+  position: fixed;
+  top:60%;
+  z-index: 1;
+  left: 5px;
+  height: 3em;
+  font-size: 20px;
+  background-color: black;
+  opacity: 1;
+}
+.gotoTop:hover
+{
+  background-color: black;
+}
 .navbar
 {
     
     display: block;
+    
     background-image: linear-gradient(to right, rgba(13, 155, 238, 0.726), rgba(24, 19, 19, 0.233));
 }
 .nav
 {
    padding-right: 0;
+   justify-content: right;
+   /* background-image: linear-gradient(to right, rgba(13, 155, 238, 0.726), rgba(24, 19, 19, 0.233)); */
+}
+.nav > li > a{
+ color: rgb(12, 14, 15);
+ font-weight: bolder;
+ margin: 3px;
+ padding: 3px;
+
+}
+.nav > li:hover{
+  box-shadow: 3px 3px 3px 1px rgb(17, 16, 16);
 }
 .logo
 {
@@ -39,7 +66,7 @@ height: 70px;
 @keyframes myLogo {
   0% { color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
-  50% { color: white;
+  50% { color: rgb(12, 8, 8);
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(229, 229, 240), 0 0 5px rgba(37, 37, 253, 0.897);}
   100%{ color: rgb(14, 13, 13);
     text-shadow: 1px 1px 2px rgb(228, 223, 223), 0 0 25px blue, 0 0 5px rgb(132, 132, 179);}
@@ -57,15 +84,15 @@ height: 70px;
 
 .logo span i
 {
-    color: rgba(235, 6, 6, 0.89);
-
-    opacity: 1;
+   
+  /* box-shadow: 2px 2px 1px rgb(13, 155, 238, 0.726); */
+  color: rgba(13, 238, 189, 0.726);
+  opacity: 2;
 }
 .logo span i:hover
 {
-    color: rgba(29, 7, 7, 0.89);
-    background-color: rgb(248, 244, 244);
-    opacity: 2;
+    
+  
     
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -89,19 +116,19 @@ h2{
 }
 /* Standard syntax */
 @keyframes myh2 {
-  0% { color: white;
+  0% { color: rgb(12, 12, 12);
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
-  50% { color: white;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;}
+  50% { color: rgb(20, 14, 14);
+    text-shadow: 2px 2px;}
   100%{ color: rgb(14, 13, 13);
     text-shadow: 0 0 3px #FF0000;}
 }
 
-@keyframes myh2 {
-  0% { color: white;
+@-webkit-keyframes myh2 {
+  0% { color: rgb(12, 12, 12);
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;}
-  50% { color: white;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;}
+  50% { color: rgb(20, 14, 14);
+    text-shadow: 2px 2px;}
   100%{ color: rgb(14, 13, 13);
     text-shadow: 0 0 3px #FF0000;}
 }
@@ -145,7 +172,7 @@ flex:0 0 100%;
 width:90%;
 height: 40%;
 box-shadow: 10px 10px 5px grey;
-
+/* transition:.2s ease-in-out linear; */
 }
 .home .carousel img
 {
